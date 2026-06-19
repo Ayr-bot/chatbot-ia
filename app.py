@@ -1,7 +1,8 @@
 from flask import Flask, request, jsonify, render_template
-import requests
+import anthropic
+import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 OLLAMA_URL = "http://localhost:11434/api/chat"
 MODELO = "llama3.2"
