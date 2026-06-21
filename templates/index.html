@@ -4,14 +4,16 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Asistente Virtual</title>
-  <link rel="stylesheet" href="estilos.css">
+ <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+
+
 </head>
 <body>
 <div class="chat-container">
 
   <div class="chat-header">
     <div class="header-left">
-      <div class="header-avatar"><img src="img/sunafilito.png" alt="SUNAFIL"></div>
+      <div class="header-avatar"><img src="{{ url_for('static', filename='img/sunafilito.png') }}" alt="SUNAFIL"></div>
       <div>
         <div class="header-title">Asistente Virtual</div>
         <div class="header-sub">En línea</div>
@@ -23,7 +25,7 @@
   </div>
 
   <div class="profile-card">
-    <div class="profile-avatar"><img src="img/sunafilito.png" alt="SUNAFIL"></div>
+    <div class="profile-avatar"><img src="{{ url_for('static', filename='img/sunafilito.png') }}" alt="SUNAFIL"></div>
     <div class="profile-name">Asistente Virtual</div>
     <div class="profile-sub">¿Cómo puedo ayudarte hoy?</div>
   </div>
@@ -40,5 +42,5 @@
 
 
 </body>
-<script src="javascript.js"></script>
+<script src="{{ url_for('static', filename='javascript.js') }}"></script>
 </html>
